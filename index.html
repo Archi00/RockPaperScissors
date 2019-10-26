@@ -2,36 +2,37 @@
 <html>
 <head>
     <title>
-        Rock Paper Scissors
+        rock paper scissors
     </title>
 </head>
 <body>
     <script>
-        let r = ["Rock", "Paper", "Scissors"]
+        let r = ["rock", "paper", "scissors"]
         let computerPlay = r[Math.floor((Math.random()*r.length))]
-        let playerPlay = prompt("What do you play?")
+        let playerChoice= prompt("What do you play?")
+        let playerPlay = playerChoice.toLowerCase()
         console.log(computerPlay)
         console.log(playerPlay)
         
         function game(computerPlay, playerPlay) {
-            if (computerPlay == "Rock" && playerPlay == "Rock") {
+            if (computerPlay == "rock" && playerPlay == "rock") {
               return ("Draw!!");
-            } else if (computerPlay == "Rock" && playerPlay == "Scissors") {
-                return ("Rock vs Scissors, Rock wins so the winner is: Computer!!");
-            } else if (computerPlay == "Rock" && playerPlay == "Paper"){
-                return ("Rock vs Paper, Paper wins so the winner is: Player!!");
-            } else if (computerPlay == "Paper" && playerPlay == "Paper") {
+            } else if (computerPlay == "rock" && playerPlay == "scissors") {
+                return ("rock vs scissors, rock wins so the winner is: Computer!!");
+            } else if (computerPlay == "rock" && playerPlay == "paper"){
+                return ("rock vs paper, paper wins so the winner is: Player!!");
+            } else if (computerPlay == "paper" && playerPlay == "paper") {
                 return ("Draw!!");
-            } else if (computerPlay == "Paper" && playerPlay == "Rock"){
-                return ("Paper vs Rock, Paper wins so the winner is: Computer!!");
-            } else if (computerPlay == "Paper" && playerPlay == "Scissors"){
-                return ("Paper vs Scissors, Scissors wins so the winner is: Player!!")
-            } else if (computerPlay == "Scissors" && playerPlay == "Scissors"){
+            } else if (computerPlay == "paper" && playerPlay == "rock"){
+                return ("paper vs rock, paper wins so the winner is: Computer!!");
+            } else if (computerPlay == "paper" && playerPlay == "scissors"){
+                return ("paper vs scissors, scissors wins so the winner is: Player!!")
+            } else if (computerPlay == "scissors" && playerPlay == "scissors"){
                 return ("Draw!!");
-            } else if (computerPlay == "Scissors" && playerPlay == "Paper"){
-                return ("Scissors vs Paper, Scissors wins so the winner is: Computer!!");
-            } else if (computerPlay == "Scissors" && playerPlay == "Rock"){
-                return ("Scissors vs Rock, Rock wins so the winner is: Player!!");
+            } else if (computerPlay == "scissors" && playerPlay == "paper"){
+                return ("scissors vs paper, scissors wins so the winner is: Computer!!");
+            } else if (computerPlay == "scissors" && playerPlay == "rock"){
+                return ("scissors vs rock, rock wins so the winner is: Player!!");
             }
         }
         console.log(game(computerPlay, playerPlay));
