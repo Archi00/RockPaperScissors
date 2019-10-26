@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Rock Paper Scissors
+    </title>
+</head>
+<body>
+    <script>
+        let responses = ["Rock", "Paper", "Scissors"]
+        
+        function computerPlay(responses) {
+            return responses[Math.floor((Math.random()*responses.length))];
+        }
+        console.log(computerPlay(responses));
+    </script>
+</body>
+</html>
