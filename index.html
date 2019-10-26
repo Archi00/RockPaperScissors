@@ -15,23 +15,23 @@
         
         function game(computerPlay, playerPlay) {
             if (computerPlay == "Rock" && playerPlay == "Rock") {
-              return console.log("Draw!!");
+              return ("Draw!!");
             } else if (computerPlay == "Rock" && playerPlay == "Scissors") {
-                return console.log("Rock vs Scissors, Rock wins so the winner is: Computer!!");
+                return ("Rock vs Scissors, Rock wins so the winner is: Computer!!");
             } else if (computerPlay == "Rock" && playerPlay == "Paper"){
-                return console.log("Rock vs Paper, Paper wins so the winner is: Player!!");
+                return ("Rock vs Paper, Paper wins so the winner is: Player!!");
             } else if (computerPlay == "Paper" && playerPlay == "Paper") {
-                return console.log("Draw!!");
+                return ("Draw!!");
             } else if (computerPlay == "Paper" && playerPlay == "Rock"){
-                return console.log("Paper vs Rock, Paper wins so the winner is: Computer!!");
+                return ("Paper vs Rock, Paper wins so the winner is: Computer!!");
             } else if (computerPlay == "Paper" && playerPlay == "Scissors"){
-                return console.log("Paper vs Scissors, Scissors wins so the winner is: Player!!")
+                return ("Paper vs Scissors, Scissors wins so the winner is: Player!!")
             } else if (computerPlay == "Scissors" && playerPlay == "Scissors"){
-                return console.log("Draw!!");
+                return ("Draw!!");
             } else if (computerPlay == "Scissors" && playerPlay == "Paper"){
-                return console.log("Scissors vs Paper, Scissors wins so the winner is: Computer!!");
+                return ("Scissors vs Paper, Scissors wins so the winner is: Computer!!");
             } else if (computerPlay == "Scissors" && playerPlay == "Rock"){
-                return console.log("Scissors vs Rock, Rock wins so the winner is: Player!!");
+                return ("Scissors vs Rock, Rock wins so the winner is: Player!!");
             }
         }
         console.log(game(computerPlay, playerPlay));
