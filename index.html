@@ -7,12 +7,41 @@
 </head>
 <body>
     <script>
-        let responses = ["Rock", "Paper", "Scissors"]
+        let r = ["Rock", "Paper", "Scissors"]
         
-        function computerPlay(responses) {
-            return responses[Math.floor((Math.random()*responses.length))];
+        function computerPlay(r) {
+            return r[Math.floor((Math.random()*r.length))];
         }
-        console.log(computerPlay(responses));
+
+        function playerPlay(r) {
+            return r[Math.floor((Math.random()*r.length))];
+        }
+        
+        function game(computerPlay, playerPlay) {
+            if (computerPlay == "Rock" && playerPlay == "Rock") {
+              return ("Draw!!");
+            } else if (computerPlay == "Rock" && playerPlay == "Scissors") {
+                return ("Rock vs Scissors, Rock wins so the winner is: Computer!!");
+            } else if (computerPlay == "Rock" && playerPlay == "Paper"){
+                return ("Rock vs Paper, Paper wins so the winner is: Player!!");
+            } else if (computerPlay == "Paper" && playerPlay == "Paper") {
+                return ("Draw!!");
+            } else if (computerPlay == "Paper" && playerPlay == "Rock"){
+                return ("Paper vs Rock, Paper wins so the winner is: Computer!!");
+            } else if (computerPlay == "Paper" && playerPlay == "Scissors"){
+                return ("Paper vs Scissors, Scissors wins so the winner is: Player!!")
+            } else if (computerPlay == "Scissors" && playerPlay == "Scissors"){
+                return ("Draw!!");
+            } else if (computerPlay == "Scissors" && playerPlay == "Paper"){
+                return ("Scissors vs Paper, Scissors wins so the winner is: Computer!!");
+            } else if (computerPlay == "Scissors" && playerPlay == "Rock"){
+                return ("Scissors vs Rock, Rock wins so the winner is: Player!!")
+            }
+        }
+        console.log(game(computerPlay, playerPlay));
+    
     </script>
+        
+
 </body>
 </html>
