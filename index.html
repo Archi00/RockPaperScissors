@@ -7,14 +7,16 @@
 </head>
 <body>
     <script>
-        let r = ["rock", "paper", "scissors"]
-        let computerPlay = r[Math.floor((Math.random()*r.length))]
-        let playerChoice= prompt("What do you play?")
+        let options = ["rock", "paper", "scissors"]
+
+        
+        let computerPlay = options[Math.floor((Math.random()*options.length))]
+        let playerChoice= prompt("What do you want to play?")
         let playerPlay = playerChoice.toLowerCase()
         
-        console.log(computerPlay)
-        console.log(playerPlay)
-        
+        console.log("Computer plays: " + computerPlay + "!")
+        console.log("Player plays: " + playerPlay + "!")
+
         function game(computerPlay, playerPlay) {
             if (computerPlay == "rock" && playerPlay == "rock") {
               return ("Draw!!");
@@ -37,9 +39,6 @@
             }
         }
         console.log(game(computerPlay, playerPlay))
-    
-    </script>
-        
-
+        </script>     
 </body>
 </html>
