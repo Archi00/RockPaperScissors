@@ -57,15 +57,17 @@
         
         function game_result(player_win_count, computer_win_count) {
             if (player_win_count > computer_win_count) {
-              return ("Player score = " + player_win_count + " Computer score = " + computer_win_count + " The winner is: The player!!");
+              return ("Player score = " + player_win_count + " Computer score = "
+              + computer_win_count + " The winner is: The player!!");
             } else if (player_win_count < computer_win_count) {
-                return ("Player score = " + player_win_count + " Computer score = " + computer_win_count + " The winner is: The computer!!");
+                return ("Player score = " + player_win_count + " Computer score = "
+                + computer_win_count + " The winner is: The computer!!");
             } else if (player_win_count == computer_win_count) {
-                return ("Player score = " + player_win_count + " Computer score = " + computer_win_count + " It's a Draw!!");
+                return ("Player score = " + player_win_count + " Computer score = "
+                + computer_win_count + " It's a Draw!!");
             }
         }
         console.log(game_result(player_win_count, computer_win_count));
-        
         </script>     
 </body>
 </html>
