@@ -42,7 +42,7 @@ function game(computerPlay, playerPlay) {
         player_win_count++;
         return ("scissors vs rock, rock wins so the winner is: Player!!");
     }
-}
+} 
 console.log(game(computerPlay, playerPlay));
 game_count++;
 
@@ -74,6 +74,8 @@ if (game_count == 5){
 const gameResult = document.createElement('div');
 gameResult.textContent = (game_result(player_win_count, computer_win_count));
 results_div.appendChild(gameResult);
+alert(game_result(player_win_count, computer_win_count));
+setTimeout("location.reload(true);",5);
 }
 }
 
