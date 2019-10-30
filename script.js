@@ -4,14 +4,20 @@ let player_win_count = 0
 let computer_win_count = 0
 
 
+document.getElementById("rock").onclick = user;
+document.getElementById("paper").onclick = user;
+document.getElementById("scissors").onclick = user;
 
-do {
+function user(){
+    var playerPlay = this.id;
+    console.log("User: " + playerPlay)
+
+
 let computerPlay = options[Math.floor((Math.random()*options.length))];
-let playerChoice= prompt("What do you want to play?",);
-let playerPlay = playerChoice.toLowerCase();
-
 console.log("Computer plays: " + computerPlay + "!");
-console.log("Player plays: " + playerPlay + "!");
+
+
+
 
 function game(computerPlay, playerPlay) {
     if (computerPlay == "rock" && playerPlay == "rock") {
@@ -45,8 +51,8 @@ function game(computerPlay, playerPlay) {
 console.log(game(computerPlay, playerPlay));
 
 game_count++;
-} while (game_count < 5);
 
+}
 
 function game_result(player_win_count, computer_win_count) {
     if (player_win_count > computer_win_count) {
@@ -60,5 +66,4 @@ function game_result(player_win_count, computer_win_count) {
         + computer_win_count + " It's a Draw!!");
     }
 }
-alert(game_result(player_win_count, computer_win_count));
-setTimeout("location.reload(true);",5);
+
